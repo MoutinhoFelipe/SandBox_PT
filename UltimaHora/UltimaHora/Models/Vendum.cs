@@ -9,5 +9,6 @@ namespace UltimaHora.Models
         public int IdCliente { get; set; }
         public DateTime DataHora { get; set; }
 
+        public virtual Cliente IdClienteNavigation { get; set; } = null!;
     }
 }

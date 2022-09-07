@@ -92,11 +92,16 @@ namespace UltimaHora.Models
                     .HasColumnName("id");
 
                 entity.Property(e => e.DataHora)
-                    .IsRowVersion()
-                    .IsConcurrencyToken()
+                    .HasColumnType("datetime")
                     .HasColumnName("dataHora");
 
                 entity.Property(e => e.IdCliente).HasColumnName("idCliente");
+
+                entity.HasOne(d => d.IdClienteNavigation)
+                    .WithMany(p => p.Venda)
+                    .HasForeignKey(d => d.IdCliente)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__venda__idCliente__47DBAE45");
             });
 
             OnModelCreatingPartial(modelBuilder);

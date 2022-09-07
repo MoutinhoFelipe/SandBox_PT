@@ -1,0 +1,6 @@
+Relatório com Quantidade de Compras por Cliente: 
+Cliente   Compras
+Felipe   2
+Otavio   1
+Chaves   1
+Felipe   1
