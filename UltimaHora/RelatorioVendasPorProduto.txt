@@ -1,0 +1,5 @@
+Relatório com Quantidade de Produtos Vendidos: 
+Produto   Quantidade
+Mouse   3
+Teclado   2
+Webcam   1
