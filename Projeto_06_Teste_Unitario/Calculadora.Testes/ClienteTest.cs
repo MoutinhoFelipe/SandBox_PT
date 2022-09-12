@@ -1,4 +1,4 @@
-﻿using Calculos;
+﻿using Calculadora.Services;
 using NSubstitute;
 using Xunit;
 
@@ -7,14 +7,17 @@ namespace Calculadora.Testes
     public class ClienteTest
     {
         [Fact]
-        public void processarSoma_chamaICalculadoraService_somar_retornavoid()
+        public void processarSoma_ChamaICalculadoraService_RecebeCalculo_Soma_RetornaVoid()
         {
             //Arrange
             var calculadoraService = NSubstitute.Substitute.For<ICalculadoraService>();
+            var calculo = NSubstitute.Substitute.For<Calculo>();
+
+
             calculadoraService.Somar(10, 5).Returns(15);
 
             //Act
-            Cliente cliente = new Cliente(calculadoraService);
+            Client cliente = new Client(calculadoraService);
             cliente.processarSoma();
 
             //Assert

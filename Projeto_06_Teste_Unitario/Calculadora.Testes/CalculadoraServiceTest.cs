@@ -1,4 +1,4 @@
-using Calculos;
+using Calculadora.Services;
 using Xunit;
 
 namespace Calculadora.Testes
