@@ -15,22 +15,28 @@ namespace Calculadora
             _calculadoraService = calculadoraService;
         }
 
+
+
         public void processarSoma(TabelaCalculos tabela, Calculo calculo)
         {
-            Console.WriteLine($"A Soma é {_calculadoraService.Somar(calculo.PrimeiroNumero, calculo.SegundoNumero)}");
+            var soma = _calculadoraService.Somar(calculo.PrimeiroNumero, calculo.SegundoNumero);
+            Console.WriteLine($"A Soma é {soma}");
             tabela.InsertCalculo(calculo);
         }
-        public void processarSubtrair(TabelaCalculos tabela, Calculo calculo)
+
+        public void processarSubtracao(TabelaCalculos tabela, Calculo calculo)
         {
-            Console.WriteLine($"A Subtração é {_calculadoraService.Somar(calculo.PrimeiroNumero, calculo.SegundoNumero)}");
+            var subtracao = _calculadoraService.Subtrair(calculo.PrimeiroNumero, calculo.SegundoNumero);
+            Console.WriteLine($"A Subtração é {subtracao}");
             tabela.InsertCalculo(calculo);
         }
-        public void processarMultiplicar(TabelaCalculos tabela, Calculo calculo)
+
+        public void processarMultiplicacao(TabelaCalculos tabela, Calculo calculo)
         {
             Console.WriteLine($"A Multiplicação é {_calculadoraService.Multiplicar(calculo.PrimeiroNumero, calculo.SegundoNumero)}");
             tabela.InsertCalculo(calculo);
         }
-        public void processarDividir(TabelaCalculos tabela, Calculo calculo)
+        public void processarDivisao(TabelaCalculos tabela, Calculo calculo)
         {
             Console.WriteLine($"A Divisão é {_calculadoraService.Dividir(calculo.PrimeiroNumero, calculo.SegundoNumero)}");
             tabela.InsertCalculo(calculo);

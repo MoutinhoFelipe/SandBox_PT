@@ -3,8 +3,11 @@ using Xunit;
 
 namespace Calculadora.Testes
 {
+
     public class CalculadoraServiceTest
     {
+        private CalculadoraService _calculadoraService = new CalculadoraService();
+
         [Fact]
         public void Somar_DoisDoubles_RetornaDouble()
         {
@@ -14,24 +17,22 @@ namespace Calculadora.Testes
             double resultadoEsperado = 10;
 
             //Act
-            CalculadoraService calculadora = new CalculadoraService();
-            var result = calculadora.Somar(n1, n2);
+            var result = _calculadoraService.Somar(n1, n2);
 
             //Assert
             Assert.Equal(resultadoEsperado, result);
         }
 
         [Fact]
-        public void Somar_DoisDoubles_RetornaDouble_()
+        public void Subtrair_DoisDoubles_RetornaDouble_()
         {
             //Arrange
-            double n1 = 0;
-            double n2 = 0;
-            double resultadoEsperado = 0;
+            double n1 = -30;
+            double n2 = -20;
+            double resultadoEsperado = -10;
 
             //Act
-            CalculadoraService calculadora = new CalculadoraService();
-            var result = calculadora.Somar(n1, n2);
+            var result = _calculadoraService.Subtrair(n1, n2);
 
             //Assert
             Assert.Equal(resultadoEsperado, result);

@@ -26,7 +26,7 @@ namespace Calculadora
             };
 
             client.processarSoma(tabelaCalculos, calculo1);
-            client.processarSubtrair(tabelaCalculos, calculo2);
+            client.processarSubtracao(tabelaCalculos, calculo2);
 
             //Listar todos itens da Lista
             foreach (var item in tabelaCalculos.GetCalculos())
